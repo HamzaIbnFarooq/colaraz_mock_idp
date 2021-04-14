@@ -6,7 +6,7 @@ const port = 3000;
 
 
 app.get('/', function(req, res) {
- res.send('hello');
+ res.send('<h1>Congratulations! The Server Is Working</h1>');
 });
 
 app.get('/COLARAZ_APP_LINKS_API', function (req, res) {
@@ -31,7 +31,7 @@ app.get('/COLARAZ_APP_LINKS_API', function (req, res) {
 app.get('/UserInformationApi', function(req, res){
     console.log('Requesting User data')
     console.log(req.originalUrl)
-    const employees = {
+    const employee = {
         'email': 'testuser522@emailnube.com',
         'firstName': 'first1',
         'lastName': 'last1',
@@ -49,7 +49,7 @@ app.get('/UserInformationApi', function(req, res){
             "width": "80%"
         },
     }
-    res.json(employees);
+    res.json(employee);
 })
 
 app.get('/connect/authorize', function (req, res) {
